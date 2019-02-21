@@ -1,0 +1,203 @@
+@import "settings";
+body {
+  opacity: 1;
+  transition: 0.8s opacity;
+
+  &.fade {
+    opacity: 0;
+    transition: none;
+  }
+}
+
+main {
+  @extend %flex;
+  flex-direction: column;
+
+  #bg {
+    background: url("../../img/bg-3_2.jpg") no-repeat center center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-size: cover;
+    filter: grayscale(80%);
+  }
+
+  .logo {
+    margin: 10px auto;
+    width: $width;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      opacity: 0.85;
+      box-shadow: 0px 0px 10px $transblack;
+    }
+  }
+  .sign-up-form {
+    opacity: 0;
+    transition: 2s opacity;
+    display: none;
+    color: $text;
+    flex-direction: column;
+    width: $width;
+    justify-content: center;
+    margin: auto auto;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(185, 185, 113, 0.918),
+      $transblack
+    );
+    box-shadow: 0 0 10px $transblack;
+
+    .header {
+      background-color: transparent;
+      text-align: center;
+      padding: 10px 0px;
+      width: 100%;
+      color: white;
+
+      a {
+        color: white;
+        font-weight: 300;
+      }
+    }
+
+    input:not(.submit) {
+      margin: 10px auto;
+
+      min-width: $widthInner;
+      display: flex;
+      padding: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 2px;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .social {
+      @extend %flex;
+      justify-content: center;
+      min-width: $widthInner;
+
+      p:first-of-type {
+        text-transform: uppercase;
+        color: white;
+      }
+      .line {
+        width: 100%;
+        border-bottom: 1px solid $text;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        width: $widthInner;
+        text-transform: uppercase;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        background-color: $text;
+        margin: 10px auto;
+        font-size: 0.7em;
+        font-weight: bold;
+        border-radius: 2px;
+        color: rgb(54, 54, 54);
+
+        span {
+          display: block;
+          border-right: 1px solid $transblack;
+          border-radius: 2px;
+          width: 20px;
+          height: 20px;
+          padding: 7px;
+          margin-right: 8px;
+          float: left;
+
+          &.fb-icon {
+            background: url("../../img/facebook.svg") no-repeat center center;
+            background-size: 70%;
+          }
+
+          &.google-icon {
+            background: url("../../img/google.svg") no-repeat center center;
+            background-size: 70%;
+          }
+        }
+
+        &:hover {
+          color: black;
+          & span {
+            background-color: rgb(34, 34, 34);
+            transition: 0.1s ease-in;
+
+            &.fb-icon {
+              background-image: url("../../img/facebook_hover.svg");
+            }
+          }
+        }
+      }
+    }
+
+    .submit {
+      border: none;
+      padding: 10px;
+      text-transform: uppercase;
+      background-color: transparent;
+      border-bottom: 2px solid yellow;
+      float: right;
+      margin-right: 6%;
+      margin-top: 30px;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+      font-size: 0.95em;
+      color: $text;
+
+      &:hover {
+        cursor: pointer;
+        color: rgb(251, 251, 139);
+        background-color: $transblack;
+        transition: 0.1s ease-in;
+      }
+    }
+  }
+
+  .sign-in-form {
+    @extend .sign-up-form;
+    display: none;
+
+    .header {
+      @extend %flex;
+      justify-content: space-around;
+    }
+  }
+
+  .active {
+    opacity: 1;
+    transition: 2s opacity;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sign-up {
+    min-width: 70%;
+  }
+
+  .logo {
+    min-width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sign-up {
+    min-width: 100%;
+  }
+
+  .logo {
+    min-width: 100%;
+  }
+}

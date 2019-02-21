@@ -1,0 +1,238 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+}
+
+main, main .sign-up-form .social, main .sign-in-form .social, main .sign-in-form .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body {
+  opacity: 1;
+  -webkit-transition: 0.8s opacity;
+  transition: 0.8s opacity;
+}
+
+body.fade {
+  opacity: 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
+main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #bg {
+  background: url("../../img/bg-3_2.jpg") no-repeat center center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-size: cover;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+
+main .logo {
+  margin: 10px auto;
+  width: 27%;
+}
+
+main .logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.85;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+main .sign-up-form, main .sign-in-form {
+  opacity: 0;
+  -webkit-transition: 2s opacity;
+  transition: 2s opacity;
+  display: none;
+  color: whitesmoke;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 27%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(185, 185, 113, 0.918)), to(rgba(0, 0, 0, 0.4)));
+  background-image: linear-gradient(to bottom, rgba(185, 185, 113, 0.918), rgba(0, 0, 0, 0.4));
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+main .sign-up-form .header, main .sign-in-form .header {
+  background-color: transparent;
+  text-align: center;
+  padding: 10px 0px;
+  width: 100%;
+  color: white;
+}
+
+main .sign-up-form .header a, main .sign-in-form .header a {
+  color: white;
+  font-weight: 300;
+}
+
+main .sign-up-form input:not(.submit), main .sign-in-form input:not(.submit) {
+  margin: 10px auto;
+  min-width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+main .sign-up-form .social, main .sign-in-form .social {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 80%;
+}
+
+main .sign-up-form .social p:first-of-type, main .sign-in-form .social p:first-of-type {
+  text-transform: uppercase;
+  color: white;
+}
+
+main .sign-up-form .social .line, main .sign-in-form .social .line {
+  width: 100%;
+  border-bottom: 1px solid whitesmoke;
+}
+
+main .sign-up-form .social a, main .sign-in-form .social a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  background-color: whitesmoke;
+  margin: 10px auto;
+  font-size: 0.7em;
+  font-weight: bold;
+  border-radius: 2px;
+  color: #363636;
+}
+
+main .sign-up-form .social a span, main .sign-in-form .social a span {
+  display: block;
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  padding: 7px;
+  margin-right: 8px;
+  float: left;
+}
+
+main .sign-up-form .social a span.fb-icon, main .sign-in-form .social a span.fb-icon {
+  background: url("../../img/facebook.svg") no-repeat center center;
+  background-size: 70%;
+}
+
+main .sign-up-form .social a span.google-icon, main .sign-in-form .social a span.google-icon {
+  background: url("../../img/google.svg") no-repeat center center;
+  background-size: 70%;
+}
+
+main .sign-up-form .social a:hover, main .sign-in-form .social a:hover {
+  color: black;
+}
+
+main .sign-up-form .social a:hover span, main .sign-in-form .social a:hover span {
+  background-color: #222222;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+main .sign-up-form .social a:hover span.fb-icon, main .sign-in-form .social a:hover span.fb-icon {
+  background-image: url("../../img/facebook_hover.svg");
+}
+
+main .sign-up-form .submit, main .sign-in-form .submit {
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-bottom: 2px solid yellow;
+  float: right;
+  margin-right: 6%;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  font-size: 0.95em;
+  color: whitesmoke;
+}
+
+main .sign-up-form .submit:hover, main .sign-in-form .submit:hover {
+  cursor: pointer;
+  color: #fbfb8b;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+main .sign-in-form {
+  display: none;
+}
+
+main .sign-in-form .header {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .active {
+  opacity: 1;
+  -webkit-transition: 2s opacity;
+  transition: 2s opacity;
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .sign-up {
+    min-width: 70%;
+  }
+  .logo {
+    min-width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sign-up {
+    min-width: 100%;
+  }
+  .logo {
+    min-width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
