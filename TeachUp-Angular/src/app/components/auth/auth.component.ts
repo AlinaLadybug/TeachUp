@@ -1,14 +1,25 @@
+import { Component, OnInit } from "@angular/core";
+
+@Component({
+  selector: "app-auth",
+  templateUrl: "./auth.component.html",
+  styleUrls: ["./auth.component.scss"]
+})
+export class AuthComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit() {}
+}
 document.addEventListener("DOMContentLoaded", contentLoaded);
 
 window.onload = fadePage;
 
 function contentLoaded() {
   addListeners();
-  console.log("ready");
 }
 
 function fadePage() {
-  let body = document.querySelector("body");
+  let body = document.querySelector("app-auth div.fade");
   body.classList.remove("fade");
 }
 

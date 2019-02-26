@@ -2,13 +2,13 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 
-import { TestSassComponent } from "./test-sass/test-sass.component";
-import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { AuthComponent } from "./components/auth/auth.component";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 
 const appRoutes: Routes = [
   {
     path: "",
-    component: TestSassComponent
+    component: AuthComponent
   },
   {
     path: "**",

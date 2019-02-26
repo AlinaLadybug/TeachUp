@@ -2,18 +2,13 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
-import { TestSassComponent } from "./test-sass/test-sass.component";
-import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
+import { AuthComponent } from "./components/auth/auth.component";
+
 import { AppRoutingModule } from "./app-routing.module";
-import { AuthComponent } from "./auth/auth.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TestSassComponent,
-    PageNotFoundComponent,
-    AuthComponent
-  ],
+  declarations: [AppComponent, PageNotFoundComponent, AuthComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
