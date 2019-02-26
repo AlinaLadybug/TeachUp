@@ -22,7 +22,7 @@ function contentLoaded() {
 }
 
 function fadePage() {
-  let body = document.querySelector("app-test-sass body");
+  let body = document.querySelector("app-test-sass div.fade");
   body.classList.remove("fade");
   console.log("remove fade");
 }
