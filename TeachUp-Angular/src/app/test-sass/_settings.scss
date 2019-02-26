@@ -1,0 +1,18 @@
+$header: #bcbec0;
+$text: whitesmoke;
+$width: 27%;
+$widthInner: 80%;
+$transblack: rgba(0, 0, 0, 0.4);
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+}
+
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+}

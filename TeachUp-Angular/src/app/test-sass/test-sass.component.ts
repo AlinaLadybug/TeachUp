@@ -1,3 +1,17 @@
+import { Component, OnInit } from "@angular/core";
+
+@Component({
+  selector: "app-test-sass",
+  templateUrl: "./test-sass.component.html",
+  styleUrls: ["./test-sass.component.scss"]
+})
+export class TestSassComponent implements OnInit {
+  hero = "Winsdstorm";
+  constructor() {}
+
+  ngOnInit() {}
+}
+
 document.addEventListener("DOMContentLoaded", contentLoaded);
 
 window.onload = fadePage;
@@ -8,8 +22,9 @@ function contentLoaded() {
 }
 
 function fadePage() {
-  let body = document.querySelector("body");
+  let body = document.querySelector("app-test-sass body");
   body.classList.remove("fade");
+  console.log("remove fade");
 }
 
 function addListeners() {

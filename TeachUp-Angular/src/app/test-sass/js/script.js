@@ -4,7 +4,6 @@ window.onload = fadePage;
 
 function contentLoaded() {
   addListeners();
-  console.log("ready");
 }
 
 function fadePage() {
